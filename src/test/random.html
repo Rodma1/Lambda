@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>随机点名器</title>
+    <style type="text/css">
+        div{
+            background-color:deepskyblue;
+            width: 400px;
+            height: 300px;
+            padding: 50PX;
+            margin-left: 30%;
+            margin-top: 100px;
+            box-sizing: border-box;
+            box-shadow:10px 10px  10px  #B00000;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+        h1{
+            width: 150px;
+            height: 80px;
+            background-color: orange;
+            margin-left: 70px;
+            padding-left: 15px;
+            padding-top: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+        .bt{
+            width: 80px;
+            height: 40px;
+            margin-left: 110px;
+            font-size: 18px;
+            font-weight: bolder;
+            background-color:green;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+    </style>
+</head>
+<body >
+<div class="random">
+    <h1 id="randomName">
+        随机点名
+    </h1>
+    <input type="submit" id="btin" class="bt" value="开始" onclick="rName()" />
+
+</div>
+</body>
+</html>
+<script>
+    var flag;
+    function rName(){
+        var bt = document.getElementById("btin");
+        if(bt.value=="开始"){
+            bt.value="停止";
+            bt.style.backgroundColor="red";
+            //开始定时器
+            flag=window.setInterval("ranName()",50);
+        }else if(bt.value=="停止"){
+            window.clearInterval(flag);
+            bt.value="开始";
+            bt.style.backgroundColor="green";
+
+        }
+
+    }
+
+    function ranName(){
+        var arr = new Array("赵丽颖","刘昊然","李宇春","何炅","谢娜","吴尊","刘德华","毛不易","张一山","贾玲","杨幂","郭麒麟","郭德纲","杨紫","于斌","梁靖康","王俊凯","王源","关晓彤","周冬雨","王一博","肖战","路飞","易烊千玺","周深");
+        var name = document.getElementById("randomName");
+        var len = arr.length;
+        var rd = randomCode(0,len);
+        name.innerHTML=arr[rd];
+    }
+
+    /*生成一个在某个范围内的随机数*/
+    function randomCode(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min
+    }
+</script>
