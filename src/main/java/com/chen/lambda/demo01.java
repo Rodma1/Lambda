@@ -1,4 +1,4 @@
-package com.chen.Lambda;
+package com.chen.lambda;
 
 /**
  * @author: 那就叫小智吧

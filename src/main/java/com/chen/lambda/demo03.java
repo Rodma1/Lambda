@@ -1,4 +1,4 @@
-package com.chen.Lambda;
+package com.chen.lambda;
 
 import java.util.function.IntPredicate;
 

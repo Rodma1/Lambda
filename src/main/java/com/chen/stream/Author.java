@@ -1,12 +1,10 @@
-package com.chen.Stream;
+package com.chen.stream;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Data

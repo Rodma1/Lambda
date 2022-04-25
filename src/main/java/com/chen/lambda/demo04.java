@@ -1,6 +1,5 @@
-package com.chen.Lambda;
+package com.chen.lambda;
 
-import java.lang.reflect.Type;
 import java.util.function.Function;
 
 /**
