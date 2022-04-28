@@ -1,4 +1,4 @@
-package com.chen.stream;
+package com.chen;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
