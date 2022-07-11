@@ -18,15 +18,15 @@ public class OptionalDemo1 {
         List<Author> authors = new Datas().getAuthors();
         optionalCreate(authors);
 
-        presentTest(null);
+        presentTest(authors);
 
     }
 
     // 创建对象 : 避免空指针异常
     private static void optionalCreate(List<Author> authorList) {
         Optional<List<Author>> authorList1 = Optional.ofNullable(authorList);
-//        System.out.println(authorList1.get());
-        System.out.println(22);
+        System.out.println(authorList1.get());
+//        System.out.println(22);
     }
 
     // 安全消费值 ifPresent

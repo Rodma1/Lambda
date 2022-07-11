@@ -18,6 +18,7 @@ public class StreamDemo1 {
     public static void main(String[] args) {
         List<Author> datas = new Datas().getAuthors();
 
+        demo01(datas);
         demo02();
 
         demo03();
@@ -43,7 +44,7 @@ public class StreamDemo1 {
         });
 
         // 通过stream.of
-        Stream.of(arr).forEach(System.out::print);
+        Stream.of(arr).forEach(System.out::println);
     }
 
     // 双列集合 : 转换成单例集合后在创建

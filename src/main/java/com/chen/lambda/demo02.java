@@ -10,6 +10,9 @@ import java.util.function.IntBinaryOperator;
 public class demo02 {
 
     public static void main(String[] args) {
+        before();
+
+        after();
     }
 
     // lambda之前
@@ -27,6 +30,7 @@ public class demo02 {
     // lambda之后
     private static void after() {
         int i = Add((left, right) -> left + right);
+        System.out.println(i);
     }
 
     private static int Add(IntBinaryOperator operator) {
